@@ -13,9 +13,9 @@
         이름 = { %type = string %option = make_from_file %from = { "이름.txt" } }
         성별 = { %type = string %option = make_from_list %from = { "남자" "여자" } }
         종족 = { %type = integer_id %option = make_from_file %from = { "종족.txt" } }
-        이명 = { %type = string* %option = make_from_file %from = { "이명.txt" } }
-        직업 = { %type = integer_id* %option = make_from_file %from = { "직업.txt" } }
-        소속 = { %type = integer_id* %option = make_from_file %from = { "소속.txt" } }
+        이명? = { %type = string* %option = make_from_file %from = { "이명.txt" } } # optional?
+        직업? = { %type = integer_id* %option = make_from_file %from = { "직업.txt" } } # optional?
+        소속? = { %type = integer_id* %option = make_from_file %from = { "소속.txt" } } # optional?
       }
     }
   

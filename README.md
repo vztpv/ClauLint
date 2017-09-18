@@ -1,5 +1,5 @@
 # ClauLint - ToDo!
-    Validator ( for EU4 SaveGame Data Style? Text, and ClauText? ),
+    Validator and Make Schema? ( for EU4 SaveGame Data Style? Text, and ClauText? ),
     Using VisualStudio2017, Windows10, ClauText.h
 
 # Example?

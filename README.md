@@ -9,7 +9,7 @@
         id = test
         $parameter = { input }
         
-        $return = { $COMP>EQ = { $parameter.input 0 } } # input >= 0
+        $return = { $COMP>EQ = { $parameter.input 0 } } # input >= 0
     }
     provinces = {
         %int%id = {

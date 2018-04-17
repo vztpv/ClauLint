@@ -13,8 +13,8 @@
     }
     provinces = {
         %int%id = {
-            pos = { row = -1 col = -1 } # for error chk?
-            country = USA # default
+            pos = { row = %int col = %int } # cf) pos%id ?
+            country = %string
             tax = %event_test
         }
     }

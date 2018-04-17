@@ -3,8 +3,8 @@
     Using VisualStudio2017, Windows10, ClauText.h
 
 # Example?
-## ClauLint?
-# in data check file?
+    ## ClauLint?
+    # in data check file?
     Event = {
         id = test
 
@@ -20,7 +20,7 @@
         }
     }
 
-# in data file?
+    # in data file?
     provinces = {
         0 = {
             pos = { row = 0 col = 0 }

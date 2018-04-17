@@ -5,7 +5,7 @@
 # Example?
     ## ClauLint?
     # in data check file?
-    Event = {
+    Event = { # $Event ?
         id = test
         $parameter = { input }
         

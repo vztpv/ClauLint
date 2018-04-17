@@ -3,66 +3,40 @@
     Using VisualStudio2017, Windows10, ClauText.h
 
 # Example?
-        {
-            %name = { %type = string %value = character }
-            %type = object*
-            {
-                %name = { %type = integer_id %option = chk_range %value = { 0 1024 } }
-                %type = object
-                {
-                    %name = { %type = string %value = { 이름 } }
-                    %type = string
-                    %option = chk_from_file 
-                    %value = { "이름.txt" }
-                }
-                {
-                    %name = { %type = string %value = { 성별 } }
-                    %type = string
-                    %option = chk_from_list
-                    %value = { 남자 여자 }	
-                }
-                {
-                    %name = { %type = string %value = { 종족 } }
-                    %type = integer_id
-                    %option = chk_from_file 
-                    %value = { "종족.txt" }	
-                }
-                {
-                    %name = { %type = string %value = { 이명 } }
-                    %type = string*
-                    %option = chk_from_file
-                    %optional = true
-                    %value = { "이명.txt" }
-                }
-                {
-                    %name = { %type = string %value = { 직업 } }
-                    %type = integer_id*
-                    %option = chk_from_file
-                    %optional = true
-                    %value = { "직업.txt" }
-                }
-                {
-                    %name = { %type = string %value = { 소속 } }
-                    %type = integer_id*
-                    %option = chk_from_file
-                    %optional = true
-                    %value = { "소속.txt" }
-                }
-            }
-        }
+## ClauLint?
+# in data check file?
+    Event = {
+        id = test
 
-# Example - Valid Text?
-    character = {
-      0 = { 
-        이름 = abc
-        성별 = 남자
-        종족 = 0
-        소속 = { 0 1 2 }
-      }
-      1 = {
-        이름 = def
-        성별 = 여자
-        종족 = 0 
-        직업 = { 0 }
-      }
+        $parameter = { input }
+
+        $return = { TRUE }
+    }
+    provinces = {
+        %int%id = {
+            pos = { row = -1 col = -1 } # for error chk?
+            country = USA # default
+            tax = %event_test
+        }
+    }
+
+# in data file?
+    provinces = {
+        0 = {
+            pos = { row = 0 col = 0 }
+            country = USA
+            tax = 10
+        }
+        1 = {
+            pos = { row = 0 col = 1 }
+            country = USA
+            tax = 20
+        }
+    }
+
+    countries = {
+        0 = { 
+            name = USA
+            provinces = { 0 1 }
+        }
     }

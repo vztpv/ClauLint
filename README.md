@@ -7,10 +7,9 @@
     # in data check file?
     Event = {
         id = test
-
         $parameter = { input }
-
-        $return = { TRUE }
+        
+        $return = { $COMP>EQ = { $parameter.input 0 } } # input >= 0
     }
     provinces = {
         %int%id = {

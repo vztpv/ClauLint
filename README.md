@@ -48,4 +48,41 @@
     }
 
     provinces = { # $가 안 붙으면 파일 체크 데이터?
-        %int%id%one_more 
+        %int%id%one_more = {
+            # Comparision between UserType and UserType?
+            pos%id%event_pos_test = { row = %int col = %int } 
+            country = %string
+            tax = %int%event_test
+        }
+    }
+
+    countries = {
+        USA%id = {
+            # x = { 1 2 3 4  } -> x = { %int%one_more%event_is_plus }
+            provinces = { %id%one_more%event_test } 
+            core%one_more = %id%int%event_test
+        }
+    }
+
+# in data file?
+    provinces = {
+        0 = {
+            pos = { row = 0 col = 0 }
+            country = USA
+            tax = 10
+        }
+        1 = {
+            pos = { row = 0 col = 1 }
+            country = USA
+            tax = 20
+        }
+    }
+
+    countries = {
+        USA = {
+            provinces = { 0 1 }
+            core = 0
+            core = 1
+        }
+    }
+

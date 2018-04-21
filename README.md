@@ -79,9 +79,9 @@
     }
 
     countries = {
-    USA = {
-        provinces = { 0 1 }
-        core = 0
-        core = 1
-    }
+        USA = {
+            provinces = { 0 1 }
+            core = 0
+            core = 1
+        }
     }

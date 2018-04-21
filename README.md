@@ -4,20 +4,20 @@
 
 # Example?
  # in data check file?
-
     # %int %float %string %dateA,B,C?
     # %optional %any
+    # %one_more  <>  %just_one
     # %id
 
     ## cf) NO_USE_INPUT? - default is false? or true?
 
-    $x = 1 # for Event?
+    $ZERO = 0 # for Event? # define -> $~, USE -> ~
 
     $Event = { # $Event?
         id = test
         $parameter = { input }
 
-        $return = { $COMP>EQ = { $parameter.input 0 } }
+        $return = { $COMP>EQ = { $parameter.input /./ZERO } }
     }
 
     $Event = {
@@ -48,11 +48,19 @@
     }
 
     provinces = { # $가 안 붙으면 파일 체크 데이터?
-        %int%id = {
-            # Comparision between UserType and UserType.
+        %int%id%one_more = {
+            # Comparision between UserType and UserType?
             pos%id%event_pos_test = { row = %int col = %int } 
             country = %string
             tax = %int%event_test
+        }
+    }
+
+    countries = {
+        USA%id = {
+            # x = { 1 2 3 4  } -> x = { %int%one_more%event_is_plus }
+            provinces = { %id%one_more%event_test } 
+            core%one_more = %id%int%event_test
         }
     }
 

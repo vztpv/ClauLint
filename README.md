@@ -66,16 +66,16 @@
 
   # in data file?
     provinces = {
-    0 = {
-        pos = { row = 0 col = 0 }
-        country = USA
-        tax = 10
-    }
-    1 = {
-        pos = { row = 0 col = 1 }
-        country = USA
-        tax = 20
-    }
+        0 = {
+            pos = { row = 0 col = 0 }
+            country = USA
+            tax = 10
+        }
+        1 = {
+            pos = { row = 0 col = 1 }
+            country = USA
+            tax = 20
+        }
     }
 
     countries = {

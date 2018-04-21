@@ -7,20 +7,20 @@
     # %int %float %string %dateA,B,C?
     # %optional %any
     # %one_more  <>  %just_one
-    # %id
+    # %id %total_id
 
     ## cf) NO_USE_INPUT? - default is false? or true?
 
     $ZERO = 0 # for Event? # define -> $~, USE -> ~
 
-    $Event = { # $Event?
+    $Event = { # $Event?, %event_test
         id = test
         $parameter = { input }
 
         $return = { $COMP>EQ = { $parameter.input /./ZERO } }
     }
 
-    $Event = {
+    $Event = { # %event_pos_test
         id = pos_test
         $parameter = { input }  # 3 4    $add = { 3 4 }
         $local = { row col }
@@ -49,20 +49,22 @@
 
     provinces = { # $가 안 붙으면 파일 체크 데이터?
         %int%id%one_more = {
-            # Comparision between UserType and UserType?
-            pos%id%event_pos_test = { row = %int col = %int } 
+            # Comparison between UserType and UserType?
+            pos%total_id%event_pos_test = { row = %int col = %int } 
             country = %string
             tax = %int%event_test
         }
     }
 
     countries = {
-        USA%id = {
+        %string%id = {
             # x = { 1 2 3 4  } -> x = { %int%one_more%event_is_plus }
-            provinces = { %id%one_more%event_test } 
-            core%one_more = %id%int%event_test
+            provinces = { %total_id%one_more%event_test } 
+            # %total_id => it is id(unique value) in /./countries/$/provinces ( $ means all ) 
+            core%one_more = %total_id%int%event_test
         }
     }
+
 
 # in data file?
     provinces = {
